@@ -86,7 +86,7 @@ Main class for interacting with Ollama.
 ### `Message(role, content)`
 Represents a chat message. `role` accepts a `Role` enum or a plain string.
 ### `Role`
-Enum with values: `SYSTEM`, `USER`, `ASSISTANT`
+Enum with values: `SYSTEM`, `USER`, `ASSISTANT`, `TOOL`
 ### `Tool(name, description, params)`
 Defines a callable tool the model can invoke.
 ### `Param(name, description, param_type, required=True)`
