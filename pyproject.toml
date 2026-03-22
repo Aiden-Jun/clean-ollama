@@ -4,6 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "clean-ollama"
+readme = "README.md"
 version = "1.1.0"
 description = "A minimal, typed Python interface for Ollama that simplifies the existing ollama library"
 requires-python = ">=3.10"
@@ -11,4 +12,3 @@ dependencies = ["ollama"]
 
 [project.urls]
 Homepage = "https://github.com/Aiden-Jun/clean-ollama"
-readme = "README.md"
