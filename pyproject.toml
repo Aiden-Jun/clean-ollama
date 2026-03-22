@@ -11,3 +11,4 @@ dependencies = ["ollama"]
 
 [project.urls]
 Homepage = "https://github.com/Aiden-Jun/clean-ollama"
+readme = "README.md"
