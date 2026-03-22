@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "clean-ollama"
-version = "1.0.0"
+version = "1.1.0"
 description = "A minimal, typed Python interface for Ollama that simplifies the existing ollama library"
 requires-python = ">=3.10"
 dependencies = ["ollama"]
