@@ -1,5 +1,5 @@
 # clean-ollama
-A minimal, typed Python interface for Ollama that cuts through the boilerplate of the official library.
+A minimal, typed Python interface for Ollama that simplifies the existing ollama library 
 ## Installation
 Install with pip
 ```bash

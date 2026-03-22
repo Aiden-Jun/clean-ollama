@@ -1,5 +1,6 @@
 from typing import Iterator, Tuple
 from enum import Enum
+import subprocess
 import ollama
 
 
@@ -45,6 +46,24 @@ class Message:
 class Client:
     def __init__(self, model):
         self._model = model
+        self._check_ollama_installed()
+
+    @staticmethod
+    def _check_ollama_installed():
+        try:
+            subprocess.run(
+                ["ollama", "--version"],
+                check=True,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+        except FileNotFoundError:
+            raise RuntimeError(
+                "ollama is not installed or not found in PATH. "
+                "Install it from https://www.ollama.com/"
+            )
+        except subprocess.CalledProcessError as e:
+            raise RuntimeError(f"ollama check failed with exit code {e.returncode}")
 
     def load(self):
         ollama.chat(model=self._model, messages=[], keep_alive=-1)
